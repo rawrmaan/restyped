@@ -1,7 +1,7 @@
 {
   "name": "restyped",
   "version": "1.0.0",
-  "description": "",
+  "description": "End-to-end REST API typing with TypeScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/rawrmaan/restyped.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rawrmaan/restyped/issues"
   },
