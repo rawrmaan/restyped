@@ -7,6 +7,8 @@
 </p>
 
 ## Motivation
+Read the [blog post](https://blog.falcross.com/)
+
 Typescript is a one-way street: Once you start using it, it's hard to go back to plain JS. In fact, you'll probably want to write your entire application in TypeScript.
 
 After happily typing all of your models, you notice that there's a disconnect: Your types don't make it over the wire! The server doesn't check types before it sends an HTTP response, and the client doesn't know what types it's receiving. Conversely, the server doesn't know what types it should receive, and the client doesn't know what to send.
@@ -23,7 +25,7 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 - **Great for public APIs.** Create an API definition in minutes so TypeScript users can consume your API, fully typed
 
 ## How to use it
-RESTyped is a specification. Once you spend a few minutes typing your API, you can use these server and client wrappers to serve and consume your API in a type-safe manner:
+RESTyped is a specification. Once you spend a few minutes typing your API using the specification below, you can use these server and client wrappers to serve and consume your API in a type-safe manner:
 
 - [restyped-axios](https://githob.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESType-specced APIs
 - [restyped-express](https://github.com/rawrmaan/restyped-express) - Server wrapper for express to deliver RESTyped-specced APIs
@@ -36,9 +38,9 @@ It's very easy to get started with RESTyped. Just follow a few steps to type you
 
 - Your API should be defined in one interface, exported as `{my_api_name}API` from a file ending in `.d.ts`
 - Each route is a top level key in the interface. You should exclude any prefixes like `/api/`.
-- Each route can have keys of valid HTTP methods, up to one of each:
+- Each route can have up to one key per valid HTTP method:
   - `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, or `HEAD`
-- Each HTTP method can define any of the following properties:
+- Each HTTP method can have one or more of the following keys:
   - `params`: Route params in the URL (e.g. `/users/:id` would have `id` as a param)
   - `query`: Query string params, typically used in `GET` requests (e.g. `req.query` in express)
   - `body`: JSON body object (e.g. `req.body` in express or `data` object in an axios request)
@@ -109,8 +111,11 @@ import OrderModel from './controllers/order'
 const route = AsyncRouter<FoodDeliveryAPI>('/api/')
 
 route.post('/order', async (req) => {
+  // Will not compile if you attempt to access an invalid body property
   const {foodItemId, address} = req.body
   const success = await OrderModel.order(foodItemId, address)
+
+  // Will not compile if returned value is not of type {success: boolean}
   return {success}
 })
 ```
@@ -124,6 +129,7 @@ import {FoodDeliveryAPI} from './api.d.ts'
 const api = axios.create({baseURL: 'https://fooddelivery.com/api/'})
 
 async function order() {
+  // Will not compile if you request an invlid route or pass incorrect body params
   const res = await api.post(
     '/order',
     {
@@ -131,5 +137,8 @@ async function order() {
       address: '1601 Market St, Phiadelphia, PA 19103'
     }
   )
+
+  // TypeScript knows that res.data is of type {success: boolean}
+  const {success} = res.data
 }
 ```
