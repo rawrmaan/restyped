@@ -1,7 +1,6 @@
-
-<h1 align="center">
-  RESTyped
-</h1>
+<p align="center">
+  <img src="/images/logo.png" width="350"/>
+</p>
 <p align="center">
   End-to-end typing for REST APIs with TypeScript
 </p>
