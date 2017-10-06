@@ -28,8 +28,8 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 ## How to use it
 RESTyped is a specification. Once you spend a few minutes typing your API using the specification below, you can use these server and client wrappers to serve and consume your API in a type-safe manner:
 
-- [restyped-axios](https://githob.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESType-specced APIs
-- [restyped-express](https://github.com/rawrmaan/restyped-express) - Server wrapper for express to deliver RESTyped-specced APIs
+- [restyped-axios](https://githob.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESTyped APIs
+- [restyped-express](https://github.com/rawrmaan/restyped-express) - Server wrapper for express to deliver RESTyped APIs
 
 You can help make RESTyped more useful by typing your favorite server framework or HTTP client!
 
