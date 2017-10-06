@@ -22,6 +22,7 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 - **Unopinionated.** Works with any new or existing REST API
 - **Universal.** Supports any server framework or REST client
 - **Lightweight.** Most server and client implementations don't even add any code--just types
+- **Use existing syntax.** Serve and call your HTTP routes just like you always have been
 - **Great for private APIs.** Keep your API clients in sync with the latest changes across your organization
 - **Great for public APIs.** Create an API definition in minutes so TypeScript users can consume your API, fully typed
 
