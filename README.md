@@ -1,9 +1,9 @@
 
 <h1 align="center">
-  RESTyped 
+  RESTyped
 </h1>
 <p align="center">
-  End-to-end REST API typing with TypeScript
+  End-to-end typing for REST APIs with TypeScript
 </p>
 
 ## Motivation

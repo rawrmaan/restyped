@@ -1,7 +1,7 @@
 {
   "name": "restyped",
   "version": "1.0.0",
-  "description": "End-to-end REST API typing with TypeScript",
+  "description": "End-to-end typing for REST APIs with TypeScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
