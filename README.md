@@ -21,14 +21,14 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 - **Unopinionated.** Works with any new or existing REST API
 - **Universal.** Supports any server framework or REST client
 - **Lightweight.** Most server and client implementations don't even add any code--just types
-- **Use existing syntax.** Serve and call your HTTP routes just like you always have been
+- **Use existing syntax.** Serve and call your HTTP routes just like you always have
 - **Great for private APIs.** Keep your API clients in sync with the latest changes across your organization
 - **Great for public APIs.** Create an API definition in minutes so TypeScript users can consume your API, fully typed
 
 ## How to use it
 RESTyped is a specification. Once you spend a few minutes typing your API using the specification below, you can use these server and client wrappers to serve and consume your API in a type-safe manner:
 
-- [restyped-axios](https://githob.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESTyped APIs
+- [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESTyped APIs
 - [restyped-express](https://github.com/rawrmaan/restyped-express) - Server wrapper for express to deliver RESTyped APIs
 
 You can help make RESTyped more useful by typing your favorite server framework or HTTP client!
