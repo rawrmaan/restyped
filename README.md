@@ -1,4 +1,10 @@
-# RESTyped
+
+<h1 align="center">
+  RESTyped 
+</h1>
+<p align="center">
+  End-to-end REST API typing with TypeScript
+</p>
 
 ## Motivation
 Typescript is a one-way street: Once you start using it, it's hard to go back to plain JS. In fact, you'll probably want to write your entire application in TypeScript.
