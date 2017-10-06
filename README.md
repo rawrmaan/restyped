@@ -34,6 +34,8 @@ RESTyped is a specification. Once you spend a few minutes typing your API using 
 
 You can help make RESTyped more useful by typing your favorite server framework or HTTP client!
 
+*RESTyped requires TypeScript 2.4 or higher.*
+
 ## Specification
 
 It's very easy to get started with RESTyped. Just follow a few steps to type your existing API or create a new typed API:
