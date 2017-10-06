@@ -32,9 +32,54 @@ You can help make RESTyped more useful by typing your favorite server framework 
 
 ## Specification
 
-It's very easy to get started with RESTyped. It should take you less than one minute per route.
+It's very easy to get started with RESTyped. Just follow a few steps to type your existing API or create a new typed API:
 
-## Example
+- Your API should be defined in one interface, exported as `{my_api_name}API` from a file ending in `.d.ts`
+- Each route is a top level key in the interface. You should exclude any prefixes like `/api/`.
+- Each route can have keys of valid HTTP methods, up to one of each:
+  - `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, or `HEAD`
+- Each HTTP method can define any of the following properties:
+  - `params`: Route params in the URL (e.g. `/users/:id` would have `id` as a param)
+  - `query`: Query string params, typically used in `GET` requests (e.g. `req.query` in express)
+  - `body`: JSON body object (e.g. `req.body` in express or `data` object in an axios request)
+  - `response`: The route's JSON response
+
+
+Example: `my-social-api.d.ts`
+```typescript
+interface User { // Model inteface--could be imported from another file
+  email: string
+  name: string
+  gender: 'Male' | 'Female' | 'Other'
+}
+
+export interface MySocialAPI {
+  '/users': { // Route name (wihout prefix, if you have one)
+    GET: { // Any valid HTTP method
+      query: { // Query string params (e.g. /me?includeProfilePics=true)
+        includeProfilePics?: boolean
+      }
+      response: User[] // JSON response
+    }
+  }
+
+  '/user/:id/send-message': {
+    POST: {
+      params: { // Inline route params
+        id: string
+      }
+      body: { // JSON request body
+        message: string
+      }
+      response: { // JSON response
+        success: boolean
+      }
+    }
+  }
+}
+```
+
+## Full-Stack Example
 
 ### 1. API Definition (`api.d.ts`)
 ```typescript
