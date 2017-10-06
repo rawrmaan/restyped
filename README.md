@@ -83,7 +83,7 @@ export interface MySocialAPI {
 
 ## Full-Stack Example
 
-### 1. API Definition (`api.d.ts`)
+### 1. Define your API (`api.d.ts`)
 ```typescript
 export interface FoodDeliveryAPI {
   '/order': {
