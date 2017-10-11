@@ -86,20 +86,25 @@ export interface MySocialAPI {
 
 ## Full-Stack Example
 
-### 1. Define your API (`api.d.ts`)
+### 1. Define your API (<a href="/examples/food-delivery-api.d.ts">`food-delivery-api.d.ts`</a>)
 ```typescript
 export interface FoodDeliveryAPI {
-  '/order': {
+  '/me/orders': {
     POST: {
       body: {
         foodItemId: string
         address: string
+        paymentMethod: 'card' | 'cash'
+        paymentCardId?: string
       }
       response: {
         success: boolean
+        eta?: string
       }
     }
   }
+
+  // ...other routes...
 }
 ```
 
@@ -113,7 +118,7 @@ import OrderModel from './controllers/order'
 
 const route = AsyncRouter<FoodDeliveryAPI>('/api/')
 
-route.post('/order', async (req) => {
+route.post('/me/orders', async (req) => {
   // Will not compile if you attempt to access an invalid body property
   const {foodItemId, address} = req.body
   const success = await OrderModel.order(foodItemId, address)
@@ -134,15 +139,16 @@ const api = axios.create({baseURL: 'https://fooddelivery.com/api/'})
 async function order() {
   // Will not compile if you request an invlid route or pass incorrect body params
   const res = await api.post(
-    '/order',
+    '/me/orders',
     {
       foodItemId: 123,
-      address: '1601 Market St, Phiadelphia, PA 19103'
+      address: '1601 Market St, Phiadelphia, PA 19103',
+      paymentMethod: 'cash'
     }
   )
 
-  // TypeScript knows that res.data is of type {success: boolean}
-  const {success} = res.data
+  // TypeScript knows that res.data is of type {success: boolean, eta?: string}
+  const {success, eta} = res.data
 }
 ```
 
