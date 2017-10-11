@@ -2,7 +2,8 @@
   "name": "restyped",
   "version": "1.0.2",
   "description": "End-to-end typing for REST APIs with TypeScript",
-  "main": "spec/index.d.ts",
+  "main": "index.ts",
+  "types": "spec/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
