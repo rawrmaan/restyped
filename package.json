@@ -1,6 +1,6 @@
 {
   "name": "restyped",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "End-to-end typing for REST APIs with TypeScript",
   "main": "index.ts",
   "types": "spec/index.d.ts",
