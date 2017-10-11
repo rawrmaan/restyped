@@ -42,7 +42,7 @@ It's very easy to get started with RESTyped. Just follow a few steps to type you
 - Your API should be defined in one interface, exported as `{my_api_name}API` from a file ending in `.d.ts`
 - Each route is a top level key in the interface. You should exclude any prefixes like `/api/`.
 - Each route can have up to one key per valid HTTP method:
-  - `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, or `HEAD`
+  - `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD` or `OPTIONS`
 - Each HTTP method can have one or more of the following keys:
   - `params`: Route params in the URL (e.g. `/users/:id` would have `id` as a param)
   - `query`: Query string params, typically used in `GET` requests (e.g. `req.query` in express)
@@ -92,7 +92,7 @@ export interface FoodDeliveryAPI {
   '/me/orders': {
     POST: {
       body: {
-        foodItemId: string
+        foodItemIds: string[]
         address: string
         paymentMethod: 'card' | 'cash'
         paymentCardId?: string
@@ -141,7 +141,7 @@ async function order() {
   const res = await api.post(
     '/me/orders',
     {
-      foodItemId: 123,
+      foodItemIds: ['QbY7Nmx1', '34YthU3m'],
       address: '1601 Market St, Phiadelphia, PA 19103',
       paymentMethod: 'cash'
     }

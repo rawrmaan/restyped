@@ -33,7 +33,7 @@ export interface FoodDeliveryAPI {
   '/me/orders': {
     POST: {
       body: {
-        foodItemId: string
+        foodItemIds: string[]
         address: string
         paymentMethod: 'card' | 'cash'
         paymentCardId?: string
