@@ -21,3 +21,12 @@ export interface RestypeIndexedBase {
 }
 
 // Yes, that's the whole spec as far as types are concerned. Simple!
+
+declare module 'restyped' {
+  var restyped: {
+    RestypeBase
+    RestypeIndexedBase
+  }
+
+  export = restyped
+}
