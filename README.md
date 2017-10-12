@@ -154,3 +154,7 @@ async function order() {
 
 ## What RESTyped isn't
 - **A replacement for API docs.** A RESTyped spec will help you get the **routes** and **types** right, but doesn't provide the **context** or say anything about the **content** of API requests and responses.
+
+## Popular APIs to try out
+
+- Giphy API: [`restyped-giphy-api`](https://github.com/rawrmaan/restyped-giphy-api)
