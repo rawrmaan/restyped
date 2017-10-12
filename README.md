@@ -6,8 +6,6 @@
 </p>
 
 ## Motivation
-Read the [blog post](https://blog.falcross.com/)
-
 Typescript is a one-way street: Once you start using it, it's hard to go back to plain JS. In fact, you'll probably want to write your entire application in TypeScript.
 
 After happily typing all of your models, you notice that there's a disconnect: Your types don't make it over the wire! The server doesn't check types before it sends an HTTP response, and the client doesn't know what types it's receiving. Conversely, the server doesn't know what types it should receive, and the client doesn't know what to send.
