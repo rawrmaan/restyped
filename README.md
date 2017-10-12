@@ -26,10 +26,10 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 - **Easy to learn and use.** Start using RESTyped in typically less than one minute per route
 
 ## How to use it
-RESTyped is a specification. Once you spend a few minutes typing your API using the specification below, you can use these server and client wrappers to declare and consume your API in a type-safe manner:
+RESTyped is a specification. Once you spend a few minutes typing your API using the spec below, you can use these server and client typings to declare and consume your API in a type-safe manner:
 
-- [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client wrapper for Axios to consume RESTyped APIs
-- [restyped-express](https://github.com/rawrmaan/restyped-express) - Server wrapper for express to deliver RESTyped APIs
+- [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client typings for Axios to consume RESTyped APIs
+- [restyped-express](https://github.com/rawrmaan/restyped-express) - Server typings for express to deliver RESTyped APIs (WIP)
 
 You can help make RESTyped more useful by typing your favorite server framework or HTTP client!
 
@@ -108,11 +108,11 @@ export interface FoodDeliveryAPI {
 }
 ```
 
-### 2. Serve the API via express
+### 2. Declare the API via express
 
 ```typescript
 import {AsyncRouter} from 'restyped-express'
-import {FoodDeliveryAPI} from './api.d.ts'
+import {FoodDeliveryAPI} from './food-delivery-api'
 
 import OrderModel from './controllers/order'
 
@@ -132,7 +132,7 @@ route.post('/me/orders', async (req) => {
 
 ```typescript
 import axios from 'restyped-axios'
-import {FoodDeliveryAPI} from './api.d.ts'
+import {FoodDeliveryAPI} from './food-delivery-api'
 
 const api = axios.create({baseURL: 'https://fooddelivery.com/api/'})
 
