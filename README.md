@@ -27,7 +27,7 @@ RESTyped was designed to brige the gap by creating an easy way to share types ac
 RESTyped is a specification. Once you spend a few minutes typing your API using the spec below, you can use these server and client typings to declare and consume your API in a type-safe manner:
 
 - [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client typings for Axios to consume RESTyped APIs
-- [restyped-express](https://github.com/rawrmaan/restyped-express) - Server typings for express to deliver RESTyped APIs (WIP)
+- [restyped-express-asynx](https://github.com/rawrmaan/restyped-express-async) - Server library for express to deliver RESTyped APIs using promises (WIP)
 
 You can help make RESTyped more useful by typing your favorite server framework or HTTP client!
 
