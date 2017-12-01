@@ -132,7 +132,7 @@ route.post('/me/orders', async (req) => {
 import axios from 'restyped-axios'
 import {FoodDeliveryAPI} from './food-delivery-api'
 
-const api = axios.create({baseURL: 'https://fooddelivery.com/api/'})
+const api = axios.create<FoodDeliveryAPI>({baseURL: 'https://fooddelivery.com/api/'})
 
 async function order() {
   // Will not compile if you request an invlid route or pass incorrect body params
