@@ -15,8 +15,8 @@
   and server for ease of use and peace of mind
 * **Unopinionated.** Works with any new or existing REST API
 * **Universal.** Can support any server framework or REST client
-* **~~Lightweight~~Weightless.** Client and server implementations don't add any
-  code--It's Just Types™
+* **~~Lightweight~~ Weightless.** Client and server implementations don't add
+  any code--It's Just Types™
 * **Use existing syntax.** Declare and call your routes the same way you always
   have
 * **Great for private APIs.** Keep API clients across your organization in sync
