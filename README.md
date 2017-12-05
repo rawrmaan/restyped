@@ -12,8 +12,8 @@ plain JS. In fact, you'll probably want to write your entire application in
 TypeScript.
 
 After happily typing all of your models, you notice that there's a disconnect:
-Your types don't make it over the wire! The server and client have no idea about
-what types their requests or responses should be.
+Your types don't make it over the wire! Neither the server or client have any
+information about what types HTTP requests or responses should be.
 
 RESTyped was designed to brige the gap by creating an easy way to share types
 across your API server and any public or private clients.
