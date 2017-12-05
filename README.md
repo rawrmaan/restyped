@@ -186,8 +186,8 @@ async function order() {
 ## What RESTyped isn't
 
 * **A replacement for API docs.** A RESTyped spec will help you get the
-  **routes** and **types** right, but doesn't provide the **context** or say
-  anything about the **content** of API requests and responses.
+  **routes** and **types** right, but doesn't provide any **context** or
+  explanation of your API.
 
 ## Popular APIs to try out
 
