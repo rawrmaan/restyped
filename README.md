@@ -24,30 +24,30 @@ across your API server and any public or private clients.
   and server for ease of use and peace of mind
 * **Unopinionated.** Works with any new or existing REST API
 * **Universal.** Can support any server framework or REST client
-* **Lightweight.** Most server and client implementations don't even add any
-  code--just types
-* **Use existing syntax.** Write your REST routes and clients the same way you
-  always have
+* **~~Lightweight~~Weightless.** Client and server implementations don't add any
+  code--It's Just Types™
+* **Use existing syntax.** Declare and call your routes the same way you always
+  have
 * **Great for private APIs.** Keep API clients across your organization in sync
   with the latest changes
-* **Great for public APIs.** Create an API definition so TypeScript users can
-  consume your API fully typed
-* **Easy to learn and use.** Start using RESTyped in typically less than one
-  minute per route
+* **Great for public APIs.** Create a RESTyped definition so TypeScript users
+  can consume your API fully typed
+* **Easy to learn and use.** Start using RESTyped in less than one minute per
+  route
 
 ## How to use it
 
 RESTyped is a specification. Once you spend a few minutes typing your API using
-the spec below, you can use these server and client typings to declare and
+the spec below, you can use these server and client packages to declare and
 consume your API in a type-safe manner:
 
-* [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client typings
+* [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client wrapper
   for Axios to consume RESTyped APIs
 * [restyped-express-async](https://github.com/rawrmaan/restyped-express-async) -
-  Server library for express to deliver RESTyped APIs using promises (WIP)
+  Server wrapper for express to deliver RESTyped APIs using promises (WIP)
 
-You can help make RESTyped more useful by typing your favorite server framework
-or HTTP client!
+You can help make RESTyped more useful by implementing support in your favorite
+server framework or HTTP client!
 
 **_RESTyped requires TypeScript 2.4 or higher._**
 
