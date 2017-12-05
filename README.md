@@ -28,9 +28,9 @@
 
 ## How to use it
 
-RESTyped is a specification. Once you spend a few minutes typing your API using
-the spec below, you can use these server and client packages to declare and
-consume your API in a type-safe manner:
+RESTyped is a specification (see below). You can use these server and client
+packages along with a RESTyped defintion file to declare and consume APIs in a
+type-safe manner:
 
 * [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client wrapper
   for Axios to consume RESTyped APIs
