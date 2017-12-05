@@ -62,6 +62,8 @@ your existing API or create a new typed API:
     axios request)
   * `response`: The route's JSON response
 
+Also see the spec implementation [base defintions](/spec/index.d.ts).
+
 Example: `my-social-api.d.ts`
 
 ```typescript
