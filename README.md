@@ -115,11 +115,9 @@ export interface MySocialAPI {
 
 ## Full-Stack Example
 
-### 1. Define your API (
+### 1. Define your API
 
-<a href="/examples/food-delivery-api.d.ts">`food-delivery-api.d.ts`
-
-</a>)
+<a href="/examples/food-delivery-api.d.ts">`food-delivery-api.d.ts`</a>
 
 ```typescript
 export interface FoodDeliveryAPI {
