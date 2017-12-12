@@ -117,10 +117,9 @@ export interface FoodDeliveryAPI {
   '/me/orders': {
     POST: {
       body: {
-        foodItemIds: string[]
+        foodItemIds: number[]
         address: string
         paymentMethod: 'card' | 'cash'
-        paymentCardId?: string
       }
       response: {
         success: boolean
@@ -138,15 +137,24 @@ export interface FoodDeliveryAPI {
 ```typescript
 import RestypedRouter from 'restyped-express-async'
 import { FoodDeliveryAPI } from './food-delivery-api'
+import * as express from 'express'
 
-import OrderModel from './controllers/order'
+const app = express()
 
-const router = RestypedRouter<FoodDeliveryAPI>('/api/')
+const apiRouter = express.Router()
+app.use('/api', apiRouter)
+
+const router = RestypedRouter<FoodDeliveryAPI>(apiRouter)
 
 router.post('/me/orders', async req => {
   // Will not compile if you attempt to access an invalid body property
-  const { foodItemId, address } = req.body
-  const success = await OrderModel.order(foodItemId, address)
+  const {
+    foodItemIds, // number[]
+    address, // string
+    paymentMethod // 'card' | 'cash'
+  } = req.body
+
+  const success = await OrderModel.order(foodItemIds, address, paymentMethod)
 
   // Will not compile if returned value is not of type {success: boolean}
   return { success }
@@ -164,9 +172,9 @@ const api = axios.create<FoodDeliveryAPI>({
 })
 
 async function order() {
-  // Will not compile if you request an invlid route or pass incorrect body params
+  // Will not compile if you pass incorrectly typed body params
   const res = await api.post('/me/orders', {
-    foodItemIds: ['QbY7Nmx1', '34YthU3m'],
+    foodItemIds: [142, 788],
     address: '1601 Market St, Phiadelphia, PA 19103',
     paymentMethod: 'cash'
   })
