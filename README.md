@@ -136,14 +136,14 @@ export interface FoodDeliveryAPI {
 ### 2. Declare the API via express
 
 ```typescript
-import { AsyncRouter } from 'restyped-express'
+import RestypedRouter from 'restyped-express-async'
 import { FoodDeliveryAPI } from './food-delivery-api'
 
 import OrderModel from './controllers/order'
 
-const route = AsyncRouter<FoodDeliveryAPI>('/api/')
+const router = RestypedRouter<FoodDeliveryAPI>('/api/')
 
-route.post('/me/orders', async req => {
+router.post('/me/orders', async req => {
   // Will not compile if you attempt to access an invalid body property
   const { foodItemId, address } = req.body
   const success = await OrderModel.order(foodItemId, address)
