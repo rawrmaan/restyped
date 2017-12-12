@@ -15,8 +15,7 @@
   and server for ease of use and peace of mind
 * **Unopinionated.** Works with any new or existing REST API
 * **Universal.** Can support any server framework or REST client
-* **~~Lightweight~~ Weightless.** Client and server implementations don't add
-  any code--It's Just Types™
+* **Lightweight.** Client and server implementations add little or no code--It's Just Types™
 * **Use existing syntax.** Declare and call your routes the same way you always
   have
 * **Great for private APIs.** Keep API clients across your organization in sync
@@ -35,7 +34,7 @@ type-safe manner:
 * [restyped-axios](https://github.com/rawrmaan/restyped-axios) - Client wrapper
   for Axios to consume RESTyped APIs
 * [restyped-express-async](https://github.com/rawrmaan/restyped-express-async) -
-  Server wrapper for express to deliver RESTyped APIs using promises (WIP)
+  Server wrapper for express to deliver RESTyped APIs using promises
 
 You can help make RESTyped more useful by implementing support in your favorite
 server framework or HTTP client!
