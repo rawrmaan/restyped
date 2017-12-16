@@ -70,7 +70,7 @@ interface User {
   // Model inteface--could be imported from another file
   email: string
   name: string
-  gender: 'Male' | 'Female' | 'Other'
+  role: 'customer' | 'staffer' | 'administrator'
 }
 
 export interface MySocialAPI {
