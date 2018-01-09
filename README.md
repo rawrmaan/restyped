@@ -75,7 +75,7 @@ interface User {
 
 export interface MySocialAPI {
   '/users': {
-    // Route name (wihout prefix, if you have one)
+    // Route name (without prefix, if you have one)
     GET: {
       // Any valid HTTP method
       query: {
