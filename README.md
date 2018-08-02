@@ -11,19 +11,19 @@
 
 ## Benefits
 
-- **End to end typing.** Share request and response types between your client
-  and server for ease of use and peace of mind
-- **Unopinionated.** Works with any new or existing REST API
-- **Universal.** Can support any server framework or REST client
-- **Lightweight.** Client and server implementations add little or no code--It's Just Types™
+- **End-to-end typing.** Share request and response types between your client
+  and server for ease of use and peace of mind.
+- **Unopinionated.** Works with any new or existing REST API.
+- **Universal.** Can support any server framework or REST client.
+- **~~Lightweight~~ Weightless.** Client and server implementations add no runtime code--It's Just Types™.
 - **Use existing syntax.** Declare and call your routes the same way you always
-  have
+  have.
 - **Great for private APIs.** Keep API clients across your organization in sync
-  with the latest changes
+  with the latest changes.
 - **Great for public APIs.** Create a RESTyped definition so TypeScript users
-  can consume your API fully typed
+  can consume your API fully typed.
 - **Easy to learn and use.** Start using RESTyped in less than one minute per
-  route
+  route.
 
 ## How to use it
 
